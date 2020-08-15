@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customized message</title>
+  </head>
+  <body>
+    <div class="output"></div>
+    <label>Name: </label>
+    <input type="text" />
+    <button type="button">Message</button>
+
+    <script>
+      const output = document.querySelector(".output");
+      const input = document.querySelector("input");
+      const btn = document.querySelector("button");
+      console.log(btn);
+
+      btn.addEventListener("click", showMessage);
+
+      function showMessage() {
+        output.innerHTML = `<h1> Hello Welcome, ${input.value} <h1>`;
+      }
+    </script>
+  </body>
+</html>
